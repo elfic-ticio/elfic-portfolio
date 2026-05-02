@@ -17,11 +17,11 @@ const dmMono = DM_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'elfic.dev — FullStack Developer',
+  title: 'Omar Sanchez — FullStack Developer',
   description:
     'FullStack Developer disponible para trabajo remoto. Next.js 14, TypeScript, Prisma + PostgreSQL, Tailwind CSS, NextAuth v5.',
   openGraph: {
-    title: 'elfic.dev — FullStack Developer',
+    title: 'Omar Sanchez — FullStack Developer',
     description: 'FullStack Developer disponible para trabajo remoto.',
     type: 'website',
   },

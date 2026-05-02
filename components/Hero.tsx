@@ -22,7 +22,7 @@ export default function Hero() {
         {/* eyebrow row */}
         <div className="flex items-center justify-between pt-12 pb-8 border-b border-white/[0.06]">
           <span className="font-mono text-xs text-muted tracking-widest uppercase">
-            elfic — 2026
+            Omar Sanchez — 2026
           </span>
           <span className="font-mono text-xs text-muted tracking-widest uppercase hidden sm:block">
             disponible para trabajo remoto

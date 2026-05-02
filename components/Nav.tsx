@@ -30,7 +30,7 @@ export default function Nav() {
           href="#"
           className="inline-flex items-center rounded-xl bg-surface border border-white/[0.08] px-3.5 py-1.5 font-mono text-xs text-accent tracking-widest hover:opacity-75 transition-opacity duration-150 ease-out"
         >
-          elfic.dev
+          Omar Sanchez
         </a>
 
         {/* Desktop links */}

@@ -7,7 +7,7 @@ export default function Footer() {
           href="#"
           className="font-mono text-sm text-accent hover:opacity-70 transition-opacity duration-150 ease-out tracking-widest"
         >
-          elfic.dev
+          Omar Sanchez
         </a>
 
         <div className="flex items-center gap-6">

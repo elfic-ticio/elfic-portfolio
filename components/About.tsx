@@ -104,7 +104,7 @@ export default function About() {
             <p className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest mb-4 pb-3 border-b border-white/[0.08]">Evidencia por tecnología — aplicado en producción</p>
             <div className="grid grid-cols-3 gap-px bg-white/[0.08]">
               {[
-                { tech: 'Next.js 14 + TypeScript', proof: 'Usado en', highlight: '4 proyectos en producción', rest: ' — full-stack, App Router, API Routes en el mismo repo' },
+                { tech: 'Next.js 14 + TypeScript', proof: 'Usado en', highlight: ' 4 proyectos en producción', rest: ' — full-stack, App Router, API Routes en el mismo repo' },
                 { tech: 'Prisma + PostgreSQL', proof: 'Esquemas multi-tenant en ', highlight: 'GlowSuite', rest: ' — Neon serverless, migraciones en producción' },
                 { tech: 'Pagos reales (Wompi)', proof: '', highlight: '3 SaaS', rest: ' con suscripciones COP — planes FREE/BASIC/PRO con webhooks' },
                 { tech: 'NextAuth v5', proof: 'Auth JWT con ', highlight: 'Edge Runtime', rest: ' — sesiones multi-rol: admin, equipo, cliente final' },
