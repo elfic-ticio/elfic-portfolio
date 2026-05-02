@@ -82,10 +82,13 @@ export default function About() {
             <div className="p-6">
               <p className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest mb-3 pb-3 border-b border-white/[0.08]">Testing</p>
               <div className="flex flex-wrap gap-1.5">
-                {['Playwright E2E','TypeScript estricto','Suite 141+ tests','Flujos de auth','Tests de pago','CI automatizado'].map((t, i) =>
-                  <span key={t} className={`font-mono text-[11px] px-2.5 py-1 rounded-sm border ${i < 2 ? 'border-cyan-400/30 text-cyan-400 bg-cyan-400/5' : 'border-white/[0.14] text-neutral-400'}`}>{t}</span>
+                {['Playwright E2E','TypeScript estricto','Suite 141+ tests','Flujos de auth','Tests de pago','CI automatizado', 'Estándar ISTQB CTFL v4.0.1'].map((t, i) =>
+                  <span key={t} className={`font-mono text-[11px] px-2.5 py-1 rounded-sm border ${i < 2 ? 'border-cyan-400/30 text-cyan-400 bg-cyan-400/5' : i === 6 ? 'border-cyan-400/20 text-cyan-300/70 bg-cyan-400/[0.03]' : 'border-white/[0.14] text-neutral-400'}`}>{t}</span>
                 )}
               </div>
+              <p className="font-mono text-[10px] text-neutral-600 mt-4 pt-3 border-t border-white/[0.08]">
+                Conocimiento del estándar <span className="text-cyan-400/60">ISTQB CTFL v4.0.1</span> — fundamentos de testing, niveles, técnicas de diseño de pruebas y gestión de defectos.
+              </p>
             </div>
 
             {/* DevOps */}
