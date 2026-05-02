@@ -43,40 +43,44 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="proyectos" className="py-24 px-6 border-t border-border">
+    <section id="proyectos" className="py-24 px-6 border-t border-white/[0.06]">
       <div className="max-w-6xl mx-auto">
-        {/* Section header */}
-        <div className="flex items-baseline gap-4 mb-16">
+        {/* section header */}
+        <div className="flex items-baseline gap-4 mb-14">
           <span className="font-mono text-xs text-muted">01</span>
           <h2 className="font-syne font-bold text-4xl md:text-5xl text-fg tracking-tighter">
             PROYECTOS
           </h2>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
+        {/* matrix-style surface grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {projects.map((project) => (
             <article
               key={project.name}
-              className={`bg-bg p-8 md:p-10 group hover:bg-card transition-colors ${
-                project.featured ? 'md:col-span-2' : ''
-              }`}
+              className={[
+                'rounded-2xl bg-surface border border-white/[0.07] p-7 md:p-9',
+                'hover:border-white/[0.14] hover:bg-raised',
+                'transition-[background-color,border-color] duration-200 ease-out',
+                'group',
+                project.featured ? 'md:col-span-2' : '',
+              ].join(' ')}
             >
               {project.featured && (
-                <span className="font-mono text-xs text-accent border border-accent px-2 py-0.5 mb-8 inline-block tracking-widest">
+                <span className="font-mono text-xs text-accent border border-accent/30 bg-accent/5 rounded-md px-2 py-0.5 mb-8 inline-block tracking-widest">
                   FEATURED
                 </span>
               )}
 
               <div
                 className={
-                  project.featured ? 'md:grid md:grid-cols-2 md:gap-16 md:items-start' : ''
+                  project.featured ? 'md:grid md:grid-cols-2 md:gap-14 md:items-start' : ''
                 }
               >
-                {/* Left: title + description */}
+                {/* title + description */}
                 <div>
                   <div className="flex items-start justify-between mb-4">
-                    <h3 className="font-syne font-bold text-2xl md:text-3xl text-fg group-hover:text-accent transition-colors leading-tight">
+                    <h3 className="font-syne font-bold text-xl md:text-2xl text-fg group-hover:text-accent transition-[color] duration-150 ease-out leading-tight">
                       {project.name}
                     </h3>
                     {project.url && (
@@ -84,26 +88,31 @@ export default function Projects() {
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-mono text-muted hover:text-accent transition-colors ml-4 mt-1 shrink-0"
+                        className="font-mono text-muted hover:text-accent transition-[color] duration-150 ease-out ml-4 mt-0.5 shrink-0 text-sm"
                         aria-label={`Visitar ${project.name}`}
                       >
                         ↗
                       </a>
                     )}
                   </div>
-
-                  <p className="font-mono text-sm text-muted leading-relaxed">
+                  <p className="font-mono text-xs text-muted leading-relaxed">
                     {project.description}
                   </p>
                 </div>
 
-                {/* Right: tags + status */}
-                <div className={project.featured ? 'mt-8 md:mt-0 flex flex-col justify-between h-full' : 'mt-6'}>
-                  <div className="flex flex-wrap gap-2">
+                {/* tags + status */}
+                <div
+                  className={
+                    project.featured
+                      ? 'flex flex-col justify-between h-full mt-8 md:mt-0'
+                      : 'mt-6'
+                  }
+                >
+                  <div className="flex flex-wrap gap-1.5">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="font-mono text-xs px-2 py-1 border border-border text-muted"
+                        className="font-mono text-xs px-2 py-1 rounded-md bg-bg border border-white/[0.07] text-muted"
                       >
                         {tag}
                       </span>
@@ -111,7 +120,7 @@ export default function Projects() {
                   </div>
 
                   {project.status && (
-                    <div className="mt-6 flex items-center gap-2">
+                    <div className="mt-5 flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block" />
                       <span className="font-mono text-xs text-accent">{project.status}</span>
                     </div>
