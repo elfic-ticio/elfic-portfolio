@@ -125,6 +125,18 @@ export default function Projects() {
                       <span className="font-mono text-xs text-accent">{project.status}</span>
                     </div>
                   )}
+
+                  {/* Testing callout dentro de la card de GlowSuite */}
+                  {project.featured && (
+                    <div className="mt-4 pt-4 border-t border-white/[0.08] flex items-start gap-3">
+                      <span className="font-mono text-[10px] text-[#c8f060] bg-[#c8f060]/10 border border-[#c8f060]/20 px-2 py-0.5 rounded-sm shrink-0">
+                        141 tests E2E
+                      </span>
+                      <p className="font-mono text-[11px] text-neutral-500 leading-relaxed">
+                        Cobertura de flujos críticos — autenticación, pagos Wompi y reservas — con Playwright.
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </article>
