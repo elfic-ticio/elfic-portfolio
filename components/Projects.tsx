@@ -59,7 +59,7 @@ const projects: Project[] = [
     description:
       'Conversor de documentos a Markdown que corre completamente en el navegador. Sin servidor, sin registro, sin que tus archivos salgan de tu equipo. Soporta PDF, Word, Excel, PowerPoint, CSV, JSON, HTML y 30+ formatos más.',
     tags: ['30+ formatos', '100% client-side', 'Sin backend', 'PDF · DOCX · XLSX · PPTX', 'CSV · JSON · HTML', 'Código fuente (.py .js .ts...)', 'Sin registro'],
-    url: 'https://convertor-mk.vercel.app',
+    url: 'https://docs2md.vercel.app/',
     github: 'https://github.com/elfic-ticio/convertor-mk',
     status: 'En producción',
   },
