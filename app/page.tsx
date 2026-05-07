@@ -6,10 +6,10 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 
 const stats = [
-  { value: '4', label: 'proyectos en producción' },
-  { value: '141', label: 'tests E2E' },
+  { value: '6', label: 'Proyectos en producción' },
+  { value: '141', label: 'Tests E2E pasando' },
   { value: '3', label: 'SaaS con pagos reales' },
-  { value: '100%', label: 'TypeScript estricto' },
+  { value: '30+', label: 'Formatos soportados en Office2MD' },
 ]
 
 export default function Home() {

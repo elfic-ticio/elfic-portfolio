@@ -1,8 +1,13 @@
 interface Project {
+  num?: string
+  label?: string
   name: string
+  accent?: string
+  type?: string
   description: string
   tags: string[]
   url?: string
+  github?: string
   featured?: boolean
   status?: string
 }
@@ -32,11 +37,29 @@ const projects: Project[] = [
     status: 'En producción',
   },
   {
-    name: 'Office → MD',
+    num: '05',
+    label: 'IA · Análisis de CVs',
+    name: 'CV',
+    accent: 'Match',
+    type: 'SaaS · AI-Powered · Full-Stack',
     description:
-      'Conversor de documentos Office a Markdown. Procesamiento en el servidor, output limpio y descargable al instante.',
-    tags: ['Next.js', 'TypeScript', 'File Processing'],
-    url: 'https://office-to-markdown-eight.vercel.app',
+      'Analizador de CVs con IA. Sube tu CV en PDF, pega la oferta de trabajo y obtén un score de compatibilidad, skills que coinciden, gaps detectados y 3 sugerencias concretas. Historial de análisis y dashboard con métricas personales.',
+    tags: ['Gemini 2.0 Flash', 'PDF parsing', 'Score 0-100', 'Auth Google + Magic Link', 'Historial', 'Dashboard', 'Prisma + PostgreSQL', 'Vercel Blob'],
+    url: 'https://cvanalizer-vert.vercel.app',
+    github: 'https://github.com/elfic-ticio/cvanalizer',
+    status: 'En producción',
+  },
+  {
+    num: '06',
+    label: 'Herramienta · Open Source',
+    name: 'Office',
+    accent: '2MD',
+    type: 'Utilidad · Conversión · 100% Client-Side',
+    description:
+      'Conversor de documentos a Markdown que corre completamente en el navegador. Sin servidor, sin registro, sin que tus archivos salgan de tu equipo. Soporta PDF, Word, Excel, PowerPoint, CSV, JSON, HTML y 30+ formatos más.',
+    tags: ['30+ formatos', '100% client-side', 'Sin backend', 'PDF · DOCX · XLSX · PPTX', 'CSV · JSON · HTML', 'Código fuente (.py .js .ts...)', 'Sin registro'],
+    url: 'https://convertor-mk.vercel.app',
+    github: 'https://github.com/elfic-ticio/convertor-mk',
     status: 'En producción',
   },
 ]
@@ -72,6 +95,13 @@ export default function Projects() {
                 </span>
               )}
 
+              {project.num && (
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="font-mono text-xs text-muted/50">{project.num}</span>
+                  <span className="font-mono text-xs text-muted">{project.label}</span>
+                </div>
+              )}
+
               <div
                 className={
                   project.featured ? 'md:grid md:grid-cols-2 md:gap-14 md:items-start' : ''
@@ -79,22 +109,45 @@ export default function Projects() {
               >
                 {/* title + description */}
                 <div>
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-start justify-between mb-1">
                     <h3 className="font-syne font-bold text-xl md:text-2xl text-fg group-hover:text-accent transition-[color] duration-150 ease-out leading-tight">
                       {project.name}
+                      {project.accent && (
+                        <span className="text-accent">{project.accent}</span>
+                      )}
                     </h3>
-                    {project.url && (
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-mono text-muted hover:text-accent transition-[color] duration-150 ease-out ml-4 mt-0.5 shrink-0 text-sm"
-                        aria-label={`Visitar ${project.name}`}
-                      >
-                        ↗
-                      </a>
-                    )}
+                    <div className="flex items-center gap-3 ml-4 mt-0.5 shrink-0">
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-mono text-muted hover:text-accent transition-[color] duration-150 ease-out text-xs"
+                          aria-label={`GitHub de ${project.name}`}
+                        >
+                          GH
+                        </a>
+                      )}
+                      {project.url && (
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-mono text-muted hover:text-accent transition-[color] duration-150 ease-out text-sm"
+                          aria-label={`Visitar ${project.name}`}
+                        >
+                          ↗
+                        </a>
+                      )}
+                    </div>
                   </div>
+
+                  {project.type && (
+                    <p className="font-mono text-[10px] text-muted/50 mb-4 tracking-wide">
+                      {project.type}
+                    </p>
+                  )}
+
                   <p className="font-mono text-xs text-muted leading-relaxed">
                     {project.description}
                   </p>
