@@ -27,7 +27,7 @@ const projects: Project[] = [
     description:
       'E-commerce de licores con defectos. Carrito, facturación, subastas en tiempo real, chatbot IA integrado y tracking de envíos.',
     tags: ['Next.js', 'TypeScript', 'Tailwind', 'IA', 'WebSockets'],
-    url: 'https://project-m3ygs.vercel.app',
+    url: 'https://project-m3ygs.vercel.app/',
     status: 'En producción',
   },
   {
