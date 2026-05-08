@@ -20,11 +20,15 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   title: 'Omar Sanchez — FullStack Developer',
   description:
-    'FullStack Developer disponible para trabajo remoto. Next.js 14, TypeScript, Prisma + PostgreSQL, Tailwind CSS, NextAuth v5.',
+    'Desarrollador FullStack disponible para trabajo remoto. Next.js 14, TypeScript, Prisma + PostgreSQL.',
   openGraph: {
     title: 'Omar Sanchez — FullStack Developer',
-    description: 'FullStack Developer disponible para trabajo remoto.',
+    description:
+      'Full-Stack Developer available for remote work. Next.js 14, TypeScript, Prisma + PostgreSQL.',
     type: 'website',
+  },
+  other: {
+    linkedin: 'https://www.linkedin.com/in/omar-sanchez-ba8208261',
   },
 }
 

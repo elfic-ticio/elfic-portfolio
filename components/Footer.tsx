@@ -25,6 +25,14 @@ export default function Footer() {
             GitHub
           </a>
           <a
+            href="https://www.linkedin.com/in/omar-sanchez-ba8208261"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-xs text-muted hover:text-fg transition-[color] duration-150 ease-out"
+          >
+            LinkedIn
+          </a>
+          <a
             href="mailto:omarjunior11@gmail.com"
             className="font-mono text-xs text-muted hover:text-fg transition-[color] duration-150 ease-out"
           >

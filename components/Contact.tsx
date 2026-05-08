@@ -5,6 +5,7 @@ import { useLang } from '@/lib/i18n/LanguageContext'
 const contactLinks = [
   { label: 'omarjunior11@gmail.com', href: 'mailto:omarjunior11@gmail.com', type: 'Email' },
   { label: 'github.com/elfic-ticio', href: 'https://github.com/elfic-ticio', type: 'GitHub' },
+  { label: 'linkedin.com/in/omar-sanchez-ba8208261', href: 'https://www.linkedin.com/in/omar-sanchez-ba8208261', type: 'LinkedIn' },
 ]
 
 export default function Contact() {

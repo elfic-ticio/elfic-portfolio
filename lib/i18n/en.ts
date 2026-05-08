@@ -21,7 +21,7 @@ export const en: Translations = {
   stats: [
     { num: '6', label: 'Projects in production' },
     { num: '141', label: 'E2E tests passing' },
-    { num: '2', label: 'Projects with AI' },
+    { num: '2', label: 'Projects with AI integrated' },
     { num: '30+', label: 'Formats in Office2MD' },
   ],
   about: {
@@ -38,9 +38,9 @@ export const en: Translations = {
     deploySkills: ['Vercel', 'Blob Storage', 'Resend', 'Wompi', 'Git + GitHub', 'Continuous deploy'],
     skillsLabel: 'Evidence by technology — applied in production',
     evidence: [
-      { tech: 'Next.js 14 + TypeScript', proof: 'Used in', highlight: ' 4 production projects', rest: ' — full-stack, App Router, API Routes in the same repo' },
+      { tech: 'Next.js 14 + TypeScript', proof: 'Used in', highlight: ' 6 production projects', rest: ' — full-stack, App Router, API Routes in the same repo' },
       { tech: 'Prisma + PostgreSQL', proof: 'Multi-tenant schemas in ', highlight: 'GlowSuite', rest: ' — Neon serverless, migrations in production' },
-      { tech: 'Real payments (Wompi)', proof: '', highlight: '3 SaaS', rest: ' with COP subscriptions — FREE/BASIC/PRO plans with webhooks' },
+      { tech: 'Real payments (Wompi)', proof: '', highlight: '1 SaaS', rest: ' with real payments in production — FREE/BASIC/PRO plans with Wompi webhooks' },
       { tech: 'NextAuth v5', proof: 'JWT auth with ', highlight: 'Edge Runtime', rest: ' — multi-role sessions: admin, team, end client' },
       { tech: 'PWA', proof: 'GlowSuite installable as app — Serwist, ', highlight: 'works offline', rest: '' },
       { tech: 'Complex e-commerce', proof: 'Auctions, cart, shipping and ', highlight: 'AI chatbot', rest: ' integrated in MermaWeb' },
