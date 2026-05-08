@@ -1,0 +1,65 @@
+export const es = {
+  nav: {
+    projects: 'proyectos',
+    about: 'sobre mí',
+    contact: 'contacto',
+  },
+  hero: {
+    tag: 'disponible para trabajo remoto',
+    sub: 'Construyendo SaaS, APIs y experiencias\nweb que funcionan en producción.',
+  },
+  projects: {
+    label: 'PROYECTOS',
+    statusLive: 'En producción',
+    statusAlpha: 'En desarrollo · Alfa',
+    featured: 'FEATURED',
+    testingBadge: '141 tests E2E',
+    testing: 'Cobertura de flujos críticos — autenticación, pagos Wompi y reservas — con Playwright.',
+  },
+  stats: [
+    { num: '6', label: 'Proyectos en producción' },
+    { num: '141', label: 'Tests E2E pasando' },
+    { num: '3', label: 'SaaS con pagos reales' },
+    { num: '30+', label: 'Formatos soportados en Office2MD' },
+  ],
+  about: {
+    label: 'sobre mí',
+    sectionTitle: 'SOBRE MÍ',
+    focusLabel: 'Áreas de enfoque',
+    p1: 'Soy un desarrollador FullStack enfocado en construir productos que funcionan en producción. Me especializo en el ecosistema TypeScript — desde APIs robustas hasta interfaces rápidas y accesibles.',
+    p2: 'He lanzado SaaS con pagos reales, implementado suites de testing E2E con 141+ tests y arquitectado sistemas multi-tenant. Trabajo de forma remota, entrego con documentación y cobertura de tests.',
+    p3: 'Actualmente disponible para proyectos freelance y posiciones remotas.',
+    stackLabel: 'Stack & habilidades',
+    catBackend: 'Backend & base de datos',
+    catServices: 'Servicios & despliegue',
+    testingSkills: ['Playwright E2E', 'TypeScript estricto', 'Suite 141+ tests', 'Flujos de auth', 'Tests de pago', 'CI automatizado', 'Estándar ISTQB CTFL v4.0.1'],
+    deploySkills: ['Vercel', 'Blob Storage', 'Resend', 'Wompi', 'Git + GitHub', 'Deploy continuo'],
+    skillsLabel: 'Evidencia por tecnología — aplicado en producción',
+    evidence: [
+      { tech: 'Next.js 14 + TypeScript', proof: 'Usado en', highlight: ' 4 proyectos en producción', rest: ' — full-stack, App Router, API Routes en el mismo repo' },
+      { tech: 'Prisma + PostgreSQL', proof: 'Esquemas multi-tenant en ', highlight: 'GlowSuite', rest: ' — Neon serverless, migraciones en producción' },
+      { tech: 'Pagos reales (Wompi)', proof: '', highlight: '3 SaaS', rest: ' con suscripciones COP — planes FREE/BASIC/PRO con webhooks' },
+      { tech: 'NextAuth v5', proof: 'Auth JWT con ', highlight: 'Edge Runtime', rest: ' — sesiones multi-rol: admin, equipo, cliente final' },
+      { tech: 'PWA', proof: 'GlowSuite instalable como app — Serwist, ', highlight: 'funciona offline', rest: '' },
+      { tech: 'E-commerce complejo', proof: 'Subastas, carrito, envíos y ', highlight: 'chatbot IA', rest: ' integrado en MermaWeb' },
+    ],
+    testingPassing: '141 / 142 pasando',
+    testingStats: [
+      { num: '142', label: 'Tests escritos' },
+      { num: '99%', label: 'Tasa de éxito' },
+      { num: '3', label: 'Flujos críticos' },
+      { num: 'E2E', label: 'Auth · Pagos · Reservas' },
+    ],
+    testingNote: 'Conocimiento del estándar ISTQB CTFL v4.0.1 — fundamentos de testing, niveles, técnicas de diseño de pruebas y gestión de defectos.',
+  },
+  contact: {
+    label: 'contacto',
+    sectionTitle: 'CONTACTO',
+    title: '¿Tienes un proyecto?',
+    titleAccent: 'Hablemos.',
+    sub: 'Disponible para trabajo remoto, contratos y proyectos freelance.\nRespondo en menos de 24 horas.',
+  },
+  footer: '© 2026 — Next.js 14 + TypeScript',
+}
+
+export type Translations = typeof es

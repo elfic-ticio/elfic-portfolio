@@ -1,3 +1,7 @@
+'use client'
+
+import { useLang } from '@/lib/i18n/LanguageContext'
+
 const stack = [
   'Next.js 14',
   'TypeScript',
@@ -10,12 +14,14 @@ const stack = [
 ]
 
 export default function Hero() {
+  const { t } = useLang()
+  const subLines = t.hero.sub.split('\n')
+
   return (
     <section
       id="hero"
       className="relative min-h-screen flex flex-col justify-between pt-14 pb-12 px-6 overflow-hidden"
     >
-      {/* matrix dot-grid texture */}
       <div className="dot-grid absolute inset-0 pointer-events-none" aria-hidden="true" />
 
       <div className="relative max-w-6xl mx-auto w-full flex flex-col flex-1 justify-between">
@@ -25,11 +31,11 @@ export default function Hero() {
             Omar Sanchez — 2026
           </span>
           <span className="font-mono text-xs text-muted tracking-widest uppercase hidden sm:block">
-            disponible para trabajo remoto
+            {t.hero.tag}
           </span>
         </div>
 
-        {/* main title — font-size capped to prevent overflow */}
+        {/* main title */}
         <div className="py-14 md:py-20 flex-1 flex flex-col justify-center">
           <h1 className="font-syne font-extrabold leading-[0.88] tracking-tighter">
             <span
@@ -50,12 +56,14 @@ export default function Hero() {
         {/* bottom row */}
         <div className="border-t border-white/[0.06] pt-8 flex flex-col md:flex-row md:items-end gap-8 justify-between">
           <p className="font-mono text-sm text-muted leading-relaxed max-w-xs">
-            Construyendo SaaS, APIs y experiencias
-            <br />
-            web que funcionan en producción.
+            {subLines.map((line, i) => (
+              <span key={i}>
+                {line}
+                {i < subLines.length - 1 && <br />}
+              </span>
+            ))}
           </p>
 
-          {/* matrix-style surface chips */}
           <div className="flex flex-wrap gap-2 md:max-w-lg">
             {stack.map((tech) => (
               <span

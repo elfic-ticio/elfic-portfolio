@@ -1,45 +1,45 @@
+'use client'
+
+import { useLang } from '@/lib/i18n/LanguageContext'
+
 const contactLinks = [
-  {
-    label: 'omarjunior11@gmail.com',
-    href: 'mailto:omarjunior11@gmail.com',
-    type: 'Email',
-  },
-  {
-    label: 'github.com/elfic-ticio',
-    href: 'https://github.com/elfic-ticio',
-    type: 'GitHub',
-  },
+  { label: 'omarjunior11@gmail.com', href: 'mailto:omarjunior11@gmail.com', type: 'Email' },
+  { label: 'github.com/elfic-ticio', href: 'https://github.com/elfic-ticio', type: 'GitHub' },
 ]
 
 export default function Contact() {
+  const { t } = useLang()
+  const subLines = t.contact.sub.split('\n')
+
   return (
     <section id="contacto" className="py-24 px-6 border-t border-white/[0.06]">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-baseline gap-4 mb-14">
           <span className="font-mono text-xs text-muted">03</span>
           <h2 className="font-syne font-bold text-4xl md:text-5xl text-fg tracking-tighter">
-            CONTACTO
+            {t.contact.sectionTitle}
           </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
-          {/* CTA */}
           <div>
             <p
               className="font-syne font-bold leading-tight tracking-tight mb-6 text-balance"
               style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)' }}
             >
-              ¿Tienes un proyecto?{' '}
-              <span className="text-accent">Hablemos.</span>
+              {t.contact.title}{' '}
+              <span className="text-accent">{t.contact.titleAccent}</span>
             </p>
             <p className="font-mono text-xs text-muted leading-relaxed">
-              Disponible para trabajo remoto, contratos y proyectos freelance.
-              <br />
-              Respondo en menos de 24 horas.
+              {subLines.map((line, i) => (
+                <span key={i}>
+                  {line}
+                  {i < subLines.length - 1 && <br />}
+                </span>
+              ))}
             </p>
           </div>
 
-          {/* matrix-style surface links */}
           <div className="flex flex-col gap-2">
             {contactLinks.map((link) => (
               <a

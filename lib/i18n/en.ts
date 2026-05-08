@@ -1,0 +1,65 @@
+import type { Translations } from './es'
+
+export const en: Translations = {
+  nav: {
+    projects: 'Projects',
+    about: 'About',
+    contact: 'Contact',
+  },
+  hero: {
+    tag: 'Available for remote work',
+    sub: 'Building SaaS, APIs and web experiences\nthat work in production',
+  },
+  projects: {
+    label: 'PROJECTS',
+    statusLive: 'Live',
+    statusAlpha: 'In development · Alpha',
+    featured: 'Featured project',
+    testingBadge: '141 E2E tests',
+    testing: 'E2E coverage of critical flows — authentication, Wompi payments and bookings — with Playwright.',
+  },
+  stats: [
+    { num: '6', label: 'Projects in production' },
+    { num: '141', label: 'E2E tests passing' },
+    { num: '2', label: 'Projects with AI' },
+    { num: '30+', label: 'Formats in Office2MD' },
+  ],
+  about: {
+    label: 'About',
+    sectionTitle: 'I build products,\nnot just code',
+    focusLabel: 'Focus areas',
+    p1: 'Full-stack developer focused on the complete product: from database design to the end-user experience. I work primarily with the TypeScript + Next.js ecosystem.',
+    p2: "I've launched SaaS with real payments, implemented E2E test suites with 141+ tests, and architected multi-tenant systems. I work remotely, deliver with documentation and test coverage.",
+    p3: 'Currently available for freelance projects and remote positions.',
+    stackLabel: 'Stack & skills',
+    catBackend: 'Backend & database',
+    catServices: 'Services & deployment',
+    testingSkills: ['Playwright E2E', 'Strict TypeScript', 'Suite 141+ tests', 'Auth flows', 'Payment tests', 'Automated CI', 'ISTQB CTFL v4.0.1 standard'],
+    deploySkills: ['Vercel', 'Blob Storage', 'Resend', 'Wompi', 'Git + GitHub', 'Continuous deploy'],
+    skillsLabel: 'Evidence by technology — applied in production',
+    evidence: [
+      { tech: 'Next.js 14 + TypeScript', proof: 'Used in', highlight: ' 4 production projects', rest: ' — full-stack, App Router, API Routes in the same repo' },
+      { tech: 'Prisma + PostgreSQL', proof: 'Multi-tenant schemas in ', highlight: 'GlowSuite', rest: ' — Neon serverless, migrations in production' },
+      { tech: 'Real payments (Wompi)', proof: '', highlight: '3 SaaS', rest: ' with COP subscriptions — FREE/BASIC/PRO plans with webhooks' },
+      { tech: 'NextAuth v5', proof: 'JWT auth with ', highlight: 'Edge Runtime', rest: ' — multi-role sessions: admin, team, end client' },
+      { tech: 'PWA', proof: 'GlowSuite installable as app — Serwist, ', highlight: 'works offline', rest: '' },
+      { tech: 'Complex e-commerce', proof: 'Auctions, cart, shipping and ', highlight: 'AI chatbot', rest: ' integrated in MermaWeb' },
+    ],
+    testingPassing: '141 / 142 passing',
+    testingStats: [
+      { num: '142', label: 'Tests written' },
+      { num: '99%', label: 'Success rate' },
+      { num: '3', label: 'Critical flows' },
+      { num: 'E2E', label: 'Auth · Payments · Bookings' },
+    ],
+    testingNote: 'Familiar with ISTQB CTFL v4.0.1 standard — testing fundamentals, test levels, design techniques and defect management',
+  },
+  contact: {
+    label: 'Contact',
+    sectionTitle: 'CONTACT',
+    title: 'Got a project?',
+    titleAccent: "Let's talk.",
+    sub: 'Available for remote work, contracts and freelance projects. I reply within 24 hours.',
+  },
+  footer: 'Built with Next.js 14 + TypeScript',
+}

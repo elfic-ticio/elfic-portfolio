@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Syne, DM_Mono } from 'next/font/google'
+import { LanguageProvider } from '@/lib/i18n/LanguageContext'
 import './globals.css'
 
 const syne = Syne({
@@ -33,8 +34,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`${syne.variable} ${dmMono.variable}`}>
-      <body className="bg-bg text-fg font-mono">{children}</body>
+    <html lang="es" className={`${syne.variable} ${dmMono.variable}`} suppressHydrationWarning>
+      <body className="bg-bg text-fg font-mono">
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   )
 }

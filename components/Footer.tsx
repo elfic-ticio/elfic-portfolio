@@ -1,6 +1,11 @@
+'use client'
+
+import { useLang } from '@/lib/i18n/LanguageContext'
+
 export default function Footer() {
+  const { t } = useLang()
+
   return (
-    /* matrix-style rounded footer floating above the page bottom */
     <footer className="mx-4 mb-4 rounded-2xl bg-surface border border-white/[0.07] py-6 px-8">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <a
@@ -27,9 +32,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <span className="font-mono text-xs text-muted">
-          © 2026 — Next.js 14 + TypeScript
-        </span>
+        <span className="font-mono text-xs text-muted">{t.footer}</span>
       </div>
     </footer>
   )

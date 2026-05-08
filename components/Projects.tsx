@@ -1,3 +1,7 @@
+'use client'
+
+import { useLang } from '@/lib/i18n/LanguageContext'
+
 interface Project {
   num?: string
   label?: string
@@ -9,7 +13,7 @@ interface Project {
   url?: string
   github?: string
   featured?: boolean
-  status?: string
+  statusKey?: 'live' | 'alpha'
 }
 
 const projects: Project[] = [
@@ -20,22 +24,20 @@ const projects: Project[] = [
     tags: ['Next.js 14', 'TypeScript', 'Prisma', 'PostgreSQL', 'NextAuth v5', 'Wompi', 'Tailwind', 'PWA'],
     url: 'https://getglowsuite.com',
     featured: true,
-    status: 'En producción',
+    statusKey: 'live',
   },
   {
-    name: 'MermaWeb',
+    num: '03',
+    label: 'E-commerce · Venta de licores · Full-Stack',
+    name: 'Merma',
+    accent: 'Web',
+    type: 'E-commerce · Venta de licores · Full-Stack',
     description:
-      'E-commerce de licores con defectos. Carrito, facturación, subastas en tiempo real, chatbot IA integrado y tracking de envíos.',
-    tags: ['Next.js', 'TypeScript', 'Tailwind', 'IA', 'WebSockets'],
-    url: 'https://project-m3ygs.vercel.app/',
-    status: 'En producción',
-  },
-  {
-    name: 'MermaAPI',
-    description:
-      'Backend REST para MermaWeb. Motor de subastas, gestión de inventario y base de datos con Prisma + PostgreSQL.',
-    tags: ['Node.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'REST API'],
-    status: 'En producción',
+      'Plataforma de venta de merma — botellas con defectos cosméticos que no pasan control de calidad. Frontend con carrito, facturación y subastas en tiempo real. Backend REST con Prisma + PostgreSQL, motor de subastas, inventario y gestión de guías de envío. Chatbot IA integrado para ventas y soporte.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind', 'Prisma', 'PostgreSQL', 'REST API', 'Subastas', 'Chatbot IA', 'WebSockets'],
+    url: 'https://project-m3ygs.vercel.app',
+    github: 'https://github.com/elfic-ticio/ProyectoAppVentaLicores',
+    statusKey: 'alpha',
   },
   {
     num: '05',
@@ -48,7 +50,7 @@ const projects: Project[] = [
     tags: ['Gemini 2.0 Flash', 'PDF parsing', 'Score 0-100', 'Auth Google + Magic Link', 'Historial', 'Dashboard', 'Prisma + PostgreSQL', 'Vercel Blob'],
     url: 'https://cvanalizer-vert.vercel.app',
     github: 'https://github.com/elfic-ticio/cvanalizer',
-    status: 'En producción',
+    statusKey: 'live',
   },
   {
     num: '06',
@@ -59,25 +61,25 @@ const projects: Project[] = [
     description:
       'Conversor de documentos a Markdown que corre completamente en el navegador. Sin servidor, sin registro, sin que tus archivos salgan de tu equipo. Soporta PDF, Word, Excel, PowerPoint, CSV, JSON, HTML y 30+ formatos más.',
     tags: ['30+ formatos', '100% client-side', 'Sin backend', 'PDF · DOCX · XLSX · PPTX', 'CSV · JSON · HTML', 'Código fuente (.py .js .ts...)', 'Sin registro'],
-    url: 'https://docs2md.vercel.app/',
+    url: 'https://convertor-mk.vercel.app',
     github: 'https://github.com/elfic-ticio/convertor-mk',
-    status: 'En producción',
+    statusKey: 'live',
   },
 ]
 
 export default function Projects() {
+  const { t } = useLang()
+
   return (
     <section id="proyectos" className="py-24 px-6 border-t border-white/[0.06]">
       <div className="max-w-6xl mx-auto">
-        {/* section header */}
         <div className="flex items-baseline gap-4 mb-14">
           <span className="font-mono text-xs text-muted">01</span>
           <h2 className="font-syne font-bold text-4xl md:text-5xl text-fg tracking-tighter">
-            PROYECTOS
+            {t.projects.label}
           </h2>
         </div>
 
-        {/* matrix-style surface grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {projects.map((project) => (
             <article
@@ -92,7 +94,7 @@ export default function Projects() {
             >
               {project.featured && (
                 <span className="font-mono text-xs text-accent border border-accent/30 bg-accent/5 rounded-md px-2 py-0.5 mb-8 inline-block tracking-widest">
-                  FEATURED
+                  {t.projects.featured}
                 </span>
               )}
 
@@ -173,21 +175,32 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  {project.status && (
+                  {project.statusKey && (
                     <div className="mt-5 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block" />
-                      <span className="font-mono text-xs text-accent">{project.status}</span>
+                      <span
+                        className={`w-1.5 h-1.5 rounded-full inline-block ${
+                          project.statusKey === 'live' ? 'bg-accent' : 'bg-yellow-400'
+                        }`}
+                      />
+                      <span
+                        className={`font-mono text-xs ${
+                          project.statusKey === 'live' ? 'text-accent' : 'text-yellow-400'
+                        }`}
+                      >
+                        {project.statusKey === 'live'
+                          ? t.projects.statusLive
+                          : t.projects.statusAlpha}
+                      </span>
                     </div>
                   )}
 
-                  {/* Testing callout dentro de la card de GlowSuite */}
                   {project.featured && (
                     <div className="mt-4 pt-4 border-t border-white/[0.08] flex items-start gap-3">
                       <span className="font-mono text-[10px] text-[#c8f060] bg-[#c8f060]/10 border border-[#c8f060]/20 px-2 py-0.5 rounded-sm shrink-0">
-                        141 tests E2E
+                        {t.projects.testingBadge}
                       </span>
                       <p className="font-mono text-[11px] text-neutral-500 leading-relaxed">
-                        Cobertura de flujos críticos — autenticación, pagos Wompi y reservas — con Playwright.
+                        {t.projects.testing}
                       </p>
                     </div>
                   )}
