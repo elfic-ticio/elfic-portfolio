@@ -18,8 +18,32 @@ export const en: Translations = {
     testingBadge: '141 E2E tests',
     testing: 'E2E coverage of critical flows — authentication, Wompi payments and bookings — with Playwright.',
   },
+  projectData: {
+    glowsuite: {
+      description: 'Complete SaaS for salon and barbershop management. Smart scheduling, point of sale, inventory control, client and team management. FREE / BASIC / PRO plans with Wompi payments. Online bookings, public storefront and multi-tenant admin panel.',
+      tags: ['Next.js 14', 'TypeScript', 'Prisma', 'PostgreSQL', 'NextAuth v5', 'Wompi', 'Tailwind', 'PWA'],
+    },
+    mermaweb: {
+      label: 'E-commerce · Liquor Sales · Full-Stack',
+      type: 'E-commerce · Liquor Sales · Full-Stack',
+      description: 'Surplus liquor sales platform — bottles with cosmetic defects that fail quality control. Frontend with cart, invoicing and real-time auctions. REST backend with Prisma + PostgreSQL, auction engine, inventory and shipping guide management. Integrated AI chatbot for sales and support.',
+      tags: ['Next.js', 'TypeScript', 'Tailwind', 'Prisma', 'PostgreSQL', 'REST API', 'Auctions', 'AI Chatbot', 'WebSockets'],
+    },
+    cvmatch: {
+      label: 'AI · CV Analysis',
+      type: 'SaaS · AI-Powered · Full-Stack',
+      description: 'AI-powered CV analyzer. Upload your CV as PDF, paste the job posting and get a compatibility score, matched skills, detected gaps and 3 concrete suggestions. Analysis history and personal metrics dashboard.',
+      tags: ['Gemini 2.0 Flash', 'PDF parsing', 'Score 0-100', 'Google Auth + Magic Link', 'History', 'Dashboard', 'Prisma + PostgreSQL', 'Vercel Blob'],
+    },
+    docs2md: {
+      label: 'Tool · Open Source',
+      type: 'Utility · Conversion · 100% Client-Side',
+      description: 'Document to Markdown converter that runs entirely in the browser. No server, no registration, your files never leave your machine. Supports PDF, Word, Excel, PowerPoint, CSV, JSON, HTML and 30+ more formats.',
+      tags: ['30+ formats', '100% client-side', 'No backend', 'PDF · DOCX · XLSX · PPTX', 'CSV · JSON · HTML', 'Source code (.py .js .ts...)', 'No registration'],
+    },
+  },
   stats: [
-    { num: '6', label: 'Projects in production' },
+    { num: '4', label: 'Projects in production' },
     { num: '141', label: 'E2E tests passing' },
     { num: '2', label: 'Projects with AI integrated' },
     { num: '30+', label: 'Formats in Office2MD' },

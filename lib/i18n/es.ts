@@ -16,8 +16,32 @@ export const es = {
     testingBadge: '141 tests E2E',
     testing: 'Cobertura de flujos críticos — autenticación, pagos Wompi y reservas — con Playwright.',
   },
+  projectData: {
+    glowsuite: {
+      description: 'SaaS completo para gestión de salones y barberías. Agenda inteligente, punto de venta, control de inventario, gestión de clientes y equipo. Planes FREE / BASIC / PRO con pagos Wompi. Reservas online, vitrina pública y panel admin multi-tenant.',
+      tags: ['Next.js 14', 'TypeScript', 'Prisma', 'PostgreSQL', 'NextAuth v5', 'Wompi', 'Tailwind', 'PWA'],
+    },
+    mermaweb: {
+      label: 'E-commerce · Venta de licores · Full-Stack',
+      type: 'E-commerce · Venta de licores · Full-Stack',
+      description: 'Plataforma de venta de merma — botellas con defectos cosméticos que no pasan control de calidad. Frontend con carrito, facturación y subastas en tiempo real. Backend REST con Prisma + PostgreSQL, motor de subastas, inventario y gestión de guías de envío. Chatbot IA integrado para ventas y soporte.',
+      tags: ['Next.js', 'TypeScript', 'Tailwind', 'Prisma', 'PostgreSQL', 'REST API', 'Subastas', 'Chatbot IA', 'WebSockets'],
+    },
+    cvmatch: {
+      label: 'IA · Análisis de CVs',
+      type: 'SaaS · AI-Powered · Full-Stack',
+      description: 'Analizador de CVs con IA. Sube tu CV en PDF, pega la oferta de trabajo y obtén un score de compatibilidad, skills que coinciden, gaps detectados y 3 sugerencias concretas. Historial de análisis y dashboard con métricas personales.',
+      tags: ['Gemini 2.0 Flash', 'PDF parsing', 'Score 0-100', 'Auth Google + Magic Link', 'Historial', 'Dashboard', 'Prisma + PostgreSQL', 'Vercel Blob'],
+    },
+    docs2md: {
+      label: 'Herramienta · Open Source',
+      type: 'Utilidad · Conversión · 100% Client-Side',
+      description: 'Conversor de documentos a Markdown que corre completamente en el navegador. Sin servidor, sin registro, sin que tus archivos salgan de tu equipo. Soporta PDF, Word, Excel, PowerPoint, CSV, JSON, HTML y 30+ formatos más.',
+      tags: ['30+ formatos', '100% client-side', 'Sin backend', 'PDF · DOCX · XLSX · PPTX', 'CSV · JSON · HTML', 'Código fuente (.py .js .ts...)', 'Sin registro'],
+    },
+  },
   stats: [
-    { num: '6', label: 'Proyectos en producción' },
+    { num: '4', label: 'Proyectos en producción' },
     { num: '141', label: 'Tests E2E pasando' },
     { num: '2', label: 'Proyectos con IA integrada' },
     { num: '30+', label: 'Formatos soportados en Office2MD' },
